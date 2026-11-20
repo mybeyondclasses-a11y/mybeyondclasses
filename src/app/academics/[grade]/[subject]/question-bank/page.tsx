@@ -18,7 +18,7 @@ export default async function SubjectResourcePage({ params }: { params: Promise<
       <h1 className="font-heading text-3xl font-extrabold text-slate-900">{g.title} {s.name} — Subject Question Bank</h1>
       <p className="mt-2 text-sm text-slate-600">Curriculum-aligned study resources managed via the MY BEYOND CLASSES Academic CMS.</p>
       <div className="mt-8 space-y-5">
-        {matchingFormulas.length > 0 && "question-bank" === "formula-sheets" ? (
+        {matchingFormulas.length > 0 ? (
           matchingFormulas.map((f) => (
             <div key={f.id} className="rounded-2xl border border-slate-200 bg-white p-6">
               <h2 className="font-heading text-lg font-bold text-slate-900">{f.title}</h2>

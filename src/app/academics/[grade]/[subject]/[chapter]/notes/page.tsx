@@ -18,7 +18,7 @@ export default async function ChapterSubPage({ params }: { params: Promise<{ gra
       <h1 className="font-heading text-3xl font-extrabold text-slate-900">{ch.title} — Chapter Revision Notes</h1>
       <p className="mt-3 text-sm text-slate-600">{ch.summary}</p>
       <div className="mt-8 space-y-5">
-        {"notes" === "formulas" && formulas.length > 0 ? (
+        {formulas.length > 0 ? (
           formulas.map((f) => (
             <div key={f.id} className="rounded-2xl border border-slate-200 bg-white p-6">
               <h2 className="font-heading text-lg font-bold text-slate-900">{f.title}</h2>
