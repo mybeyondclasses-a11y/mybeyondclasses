@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Loader2 } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
 
-export default function CompleteRegistrationPage() {
+function CompleteRegistrationContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [status, setStatus] = useState("Completing your registration...");
@@ -16,7 +16,7 @@ export default function CompleteRegistrationPage() {
         const supabase = createClient();
         const { data: { user } } = await supabase.auth.getUser();
         if (!user) {
-          router.replace("/auth/login");
+          router.replace("/register");
           return;
         }
 
@@ -53,12 +53,12 @@ export default function CompleteRegistrationPage() {
           sessionStorage.removeItem("mbc_pending_registration");
         }
 
-        const next = searchParams.get("next") || "/student/dashboard";
+        const next = searchParams.get("next") || "/register";
         router.replace(next);
         router.refresh();
       } catch {
         setStatus("Registration could not be completed. Redirecting...");
-        setTimeout(() => router.replace("/auth/login?error=registration_failed"), 1200);
+        setTimeout(() => router.replace("/register?error=registration_failed"), 1200);
       }
     }
 
@@ -72,5 +72,13 @@ export default function CompleteRegistrationPage() {
         {status}
       </div>
     </div>
+  );
+}
+
+export default function CompleteRegistrationPage() {
+  return (
+    <Suspense fallback={<div className="flex min-h-screen items-center justify-center text-sm text-slate-600">Loading registration...</div>}>
+      <CompleteRegistrationContent />
+    </Suspense>
   );
 }
