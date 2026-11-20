@@ -36,10 +36,10 @@ export function OlympiadRegistrationPage() {
 
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <a href={INDIVIDUAL_FORM} target="_blank" rel="noopener noreferrer" className="brand-gradient-bg inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:opacity-95">
-                <GraduationCap className="h-5 w-5" /> Register as a Student
+                <GraduationCap className="h-5 w-5" /> Register as a Student (Grades 1-8)
               </a>
               <a href={GROUP_FORM} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl border border-violet-200 bg-white px-6 py-3.5 text-sm font-semibold text-violet-700 shadow-sm transition hover:-translate-y-0.5 hover:border-violet-400">
-                <Users className="h-5 w-5" /> Register a School / Group
+                <Users className="h-5 w-5" /> Register a School / Group (Grades 9-12)
               </a>
             </div>
 
