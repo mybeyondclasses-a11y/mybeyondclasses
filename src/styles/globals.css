@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import "./design-tokens.css";
+@import "./animations.css";
+@import "katex/dist/katex.min.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--brand-surface);
+  color: var(--brand-ink);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+.brand-gradient-text {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #6d28d9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-gradient-bg {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #6d28d9 100%);
+}

@@ -1,0 +1,19 @@
+:root {
+  /* Extracted Brand Palette: Premium Blue, Crisp White & Royal Purple */
+  --brand-navy: #0f172a;
+  --brand-blue: #1d4ed8;
+  --brand-blue-light: #eff6ff;
+  --brand-purple: #6d28d9;
+  --brand-purple-soft: #f5f3ff;
+  --brand-surface: #ffffff;
+  --brand-surface-alt: #f8fafc;
+  --brand-border: #e2e8f0;
+  --brand-ink: #0f172a;
+  --brand-muted: #475569;
+
+  /* Radii & Spacing */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}

@@ -1,0 +1,8 @@
+import { NextResponse } from "next/server";
+import { getCurrentUserWithRole } from "@/lib/auth/rbac";
+
+export async function GET() {
+  const auth = await getCurrentUserWithRole();
+  if (!auth) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  return NextResponse.json({ service: 'reports', status: "ready", role: auth.profile.role });
+}
