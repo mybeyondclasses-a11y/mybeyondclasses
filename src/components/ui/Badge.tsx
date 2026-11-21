@@ -10,10 +10,10 @@ export function Badge({
   className?: string;
 }) {
   const styles = {
-    blue: "bg-blue-50 text-blue-700 border-blue-200",
-    purple: "bg-violet-50 text-violet-700 border-violet-200",
+    blue: "bg-[#eaf1ff] text-[#3156d9] border-[#cddaff]",
+    purple: "bg-[#f0edff] text-[#7955d9] border-[#ddd3ff]",
     slate: "bg-slate-100 text-slate-700 border-slate-200",
-    emerald: "bg-emerald-50 text-emerald-700 border-emerald-200",
+    emerald: "bg-[#e5f8f2] text-[#108a78] border-[#bfece0]",
   };
   return (
     <span

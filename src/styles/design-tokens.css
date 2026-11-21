@@ -1,19 +1,49 @@
 :root {
-  /* Extracted Brand Palette: Premium Blue, Crisp White & Royal Purple */
-  --brand-navy: #0f172a;
-  --brand-blue: #1d4ed8;
-  --brand-blue-light: #eff6ff;
-  --brand-purple: #6d28d9;
-  --brand-purple-soft: #f5f3ff;
-  --brand-surface: #ffffff;
-  --brand-surface-alt: #f8fafc;
-  --brand-border: #e2e8f0;
-  --brand-ink: #0f172a;
-  --brand-muted: #475569;
+  /* Premium Brand Palette */
+  --brand-primary: #244fe5;
+  --brand-secondary: #6652e8;
+  --brand-navy: #101d40;
+  --brand-electric: #3985ff;
+  --brand-blue: #244fe5;
+  --brand-purple: #6652e8;
+  --brand-violet: #6652e8;
+  --brand-cyan: #3985ff;
+  --brand-teal: #16a36a;
+  --brand-success: #16a36a;
+  --brand-warning: #f59e0b;
+  --brand-error: #dc3545;
+  --brand-lavender: #f1eeff;
+  --brand-light-blue: #eef3ff;
+  --brand-surface: #f7f9ff;
+  --brand-surface-alt: #e9efff;
+  --brand-border: #dce5f5;
+  --brand-ink: #101d40;
+  --brand-muted: #64748b;
+  --text-muted: #94a3b8;
 
-  /* Radii & Spacing */
-  --radius-sm: 0.5rem;
-  --radius-md: 0.75rem;
-  --radius-lg: 1rem;
-  --radius-xl: 1.5rem;
+  /* Gradients */
+  --gradient-primary: linear-gradient(110deg, #244fe5 0%, #426bfa 50%, #7652e8 100%);
+  --gradient-hero: linear-gradient(120deg, #eaf0ff 0%, #f5f1ff 55%, #ffffff 100%);
+  --gradient-section: linear-gradient(135deg, #f7f9ff 0%, #eef3ff 50%, #f7f5ff 100%);
+  --gradient-card: linear-gradient(120deg, #f0f5ff 0%, #ffffff 100%);
+
+  /* Radii */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 26px;
+  --radius-2xl: 28px;
+
+  /* Shadows */
+  --shadow-xs: 0 2px 10px rgba(25, 55, 120, 0.045);
+  --shadow-soft: 0 8px 30px rgba(25, 55, 120, 0.055);
+  --shadow-card: 0 12px 36px rgba(25, 55, 120, 0.075);
+  --shadow-hover: 0 18px 45px rgba(36, 79, 229, 0.12);
+
+  /* Transitions */
+  --transition-fast: 180ms ease;
+  --transition-normal: 280ms ease;
+
+  /* Container */
+  --container-width: 1280px;
 }

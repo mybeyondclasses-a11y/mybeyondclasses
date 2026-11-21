@@ -8,10 +8,10 @@ export function StatCard({
   hint: string;
 }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-      <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">{label}</p>
-      <p className="mt-2 font-heading text-2xl font-extrabold text-slate-900">{value}</p>
-      <p className="mt-1 text-xs text-slate-500">{hint}</p>
+    <div className="premium-card premium-card-blue group p-5">
+      <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-slate-500">{label}</p>
+      <p className="mt-3 font-heading text-2xl font-extrabold text-[#101b3d]">{value}</p>
+      <p className="mt-2 text-xs leading-relaxed text-slate-500">{hint}</p>
     </div>
   );
 }

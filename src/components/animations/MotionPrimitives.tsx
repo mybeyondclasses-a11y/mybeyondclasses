@@ -39,6 +39,25 @@ export function RevealSection({
   );
 }
 
+export function FloatingCard({
+  children,
+  className = "",
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  const prefersReduced = useReducedMotion();
+  return (
+    <motion.div
+      animate={prefersReduced ? undefined : { y: [0, -7, 0] }}
+      transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
 export function AnimatedCard({
   children,
   className = "",

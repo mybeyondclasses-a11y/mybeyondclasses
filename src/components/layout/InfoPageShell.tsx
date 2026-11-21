@@ -8,8 +8,8 @@ export function InfoPageShell({
   subtitle,
   breadcrumbLabel,
   sections,
-  ctaHref = "/contact?topic=demo",
-  ctaLabel = "Book a Free Demo",
+  ctaHref = "https://docs.google.com/forms/d/e/1FAIpQLSdZgwfd0RrtK0tookj3PVaLbw5f3I3kS3CbJbX_EZDeMF6A7g/viewform?usp=header",
+  ctaLabel = "🎓 Book Your FREE Demo Class",
 }: {
   badge: string;
   title: string;
@@ -20,15 +20,17 @@ export function InfoPageShell({
   ctaLabel?: string;
 }) {
   return (
-    <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
-      <Breadcrumbs items={[{ label: breadcrumbLabel }]} />
-      <Badge variant="blue">{badge}</Badge>
-      <h1 className="mt-3 font-heading text-3xl font-extrabold text-slate-900 sm:text-4xl">{title}</h1>
-      <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-600">{subtitle}</p>
+    <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+      <div className="page-ambient">
+        <Breadcrumbs items={[{ label: breadcrumbLabel }]} />
+        <Badge variant="blue">{badge}</Badge>
+        <h1 className="mt-4 max-w-4xl font-heading text-4xl font-extrabold tracking-tight text-[#101b3d] sm:text-5xl">{title}</h1>
+        <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">{subtitle}</p>
+      </div>
       <div className="mt-10 space-y-6">
         {sections.map((sec) => (
-          <section key={sec.heading} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h2 className="font-heading text-xl font-bold text-slate-900">{sec.heading}</h2>
+          <section key={sec.heading} className="premium-card premium-card-blue p-6 sm:p-7">
+            <h2 className="font-heading text-xl font-bold text-[#101b3d]">{sec.heading}</h2>
             <p className="mt-2 text-sm leading-relaxed text-slate-600">{sec.body}</p>
             {sec.bullets && (
               <ul className="mt-4 list-disc space-y-1.5 pl-5 text-sm text-slate-700">
@@ -39,8 +41,8 @@ export function InfoPageShell({
         ))}
       </div>
       <div className="mt-10 flex flex-wrap gap-3">
-        <Link href={ctaHref} className="brand-gradient-bg rounded-xl px-6 py-3 text-sm font-semibold text-white">{ctaLabel}</Link>
-        <Link href="/classes" className="rounded-xl border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 hover:border-blue-300">Explore Grades 1–12</Link>
+        <Link href={ctaHref} className="premium-button-primary">{ctaLabel}</Link>
+        <Link href="/classes" className="premium-button-secondary">Explore Grades 1–12</Link>
       </div>
     </div>
   );

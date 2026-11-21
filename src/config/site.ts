@@ -11,7 +11,7 @@ export const siteConfig = {
     {
       id: "instagram",
       name: "Instagram",
-      url: "https://www.instagram.com/mybeyondclasses/",
+      url: "https://www.instagram.com/mybeyondclasses.site/",
       description: "Educational updates, learning highlights, and announcements.",
     },
     {

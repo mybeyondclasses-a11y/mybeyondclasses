@@ -28,14 +28,14 @@ export function DashboardShell({
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen bg-slate-50">
+    <div className="flex min-h-screen bg-[#f7f9ff]">
       {/* Desktop Sidebar */}
-      <aside className="hidden w-64 shrink-0 border-r border-slate-200 bg-white lg:flex lg:flex-col">
-        <div className="border-b border-slate-100 p-4">
-          <Link href="/" className="block">
-            <Image src="/logo/logo.jpeg" alt="MY BEYOND CLASSES" width={56} height={56} className="h-14 w-14 object-contain" />
+      <aside className="hidden w-64 shrink-0 border-r border-[#dce5f5] bg-white/95 lg:flex lg:flex-col lg:shadow-[12px_0_35px_rgba(16,29,64,.04)]">
+        <div className="border-b border-[#edf1f8] p-4">
+          <Link href="/" className="inline-flex items-center rounded-xl">
+            <Image src="/logo/logo.jpeg" alt="MY BEYOND CLASSES" width={56} height={56} className="h-14 w-14 rounded-xl object-contain" />
           </Link>
-          <span className="mt-2 inline-block rounded-full bg-blue-50 px-2.5 py-0.5 text-[11px] font-semibold text-blue-700">
+          <span className="mt-2 inline-flex rounded-full bg-[#eef3ff] px-3 py-1 text-[11px] font-bold text-[#244fe5]">
             {roleLabel}
           </span>
         </div>
@@ -48,8 +48,8 @@ export function DashboardShell({
                 href={item.href}
                 className={`block rounded-xl px-3 py-2 text-sm font-medium transition ${
                   active
-                    ? "bg-blue-50 font-semibold text-blue-700"
-                    : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                    ? "bg-[linear-gradient(110deg,#eef3ff_0%,#f1eeff_100%)] font-bold text-[#244fe5] shadow-[0_6px_18px_rgba(36,79,229,.08)]"
+                    : "text-[#64748b] hover:bg-[#f7f9ff] hover:text-[#101d40]"
                 }`}
               >
                 {item.label}
@@ -73,7 +73,7 @@ export function DashboardShell({
       {/* Mobile Sidebar */}
       {sidebarOpen && (
         <div className="fixed inset-0 z-50 flex lg:hidden">
-          <div className="w-64 bg-white p-4 shadow-xl">
+          <div className="w-[17.5rem] bg-white p-4 shadow-[24px_0_60px_rgba(16,27,61,.18)]">
             <div className="mb-4 flex items-center justify-between">
               <span className="font-heading text-sm font-bold text-slate-900">{portalTitle}</span>
               <button onClick={() => setSidebarOpen(false)} aria-label="Close Sidebar">
@@ -99,7 +99,7 @@ export function DashboardShell({
 
       {/* Main Content */}
       <div className="flex flex-1 flex-col">
-        <header className="sticky top-0 z-30 flex items-center justify-between border-b border-slate-200 bg-white px-4 py-3 sm:px-6">
+        <header className="sticky top-0 z-30 flex items-center justify-between border-b border-[#dfe6f3] bg-white/90 px-4 py-3 backdrop-blur-xl sm:px-6">
           <div className="flex items-center gap-3">
             <button
               type="button"
@@ -128,7 +128,9 @@ export function DashboardShell({
             )}
           </div>
         </header>
-        <main className="flex-1 p-4 sm:p-6 lg:p-8">{children}</main>
+        <main className="flex-1 p-4 sm:p-6 lg:p-8">
+          <div className="mx-auto max-w-[1500px]">{children}</div>
+        </main>
       </div>
     </div>
   );

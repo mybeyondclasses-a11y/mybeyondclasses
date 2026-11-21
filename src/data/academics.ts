@@ -1448,8 +1448,8 @@ export const PRICING_PLANS = [
       "Chapter tests, sample papers & exam prep",
       "Includes Digital Learning Subscription access",
     ],
-    ctaLabel: "Book a Free Demo",
-    ctaHref: "/contact?topic=demo",
+    ctaLabel: "🎓 Book Your FREE Demo Class",
+    ctaHref: "https://docs.google.com/forms/d/e/1FAIpQLSdZgwfd0RrtK0tookj3PVaLbw5f3I3kS3CbJbX_EZDeMF6A7g/viewform?usp=header",
   },
   {
     id: "one_to_one",
@@ -1464,7 +1464,7 @@ export const PRICING_PLANS = [
       "Flexible rescheduling & conflict-free calendar booking",
       "Full access to LMS, mock tests & revision planners",
     ],
-    ctaLabel: "Request 1-on-1 Consultation",
-    ctaHref: "/contact?topic=demo",
+    ctaLabel: "🎓 Request 1-on-1 Consultation",
+    ctaHref: "https://docs.google.com/forms/d/e/1FAIpQLSdZgwfd0RrtK0tookj3PVaLbw5f3I3kS3CbJbX_EZDeMF6A7g/viewform?usp=header",
   },
 ];

@@ -38,37 +38,40 @@ export default function HomePage() {
         }}
       />
 
-      <section className="relative overflow-hidden border-b border-slate-100 bg-gradient-to-b from-blue-50/70 via-white to-white">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="mx-auto max-w-4xl text-center">
-            <Badge variant="purple" className="mb-5">
-              <Globe2 className="h-3.5 w-3.5" />
+      <section className="relative isolate overflow-hidden border-b border-[#dce5f5] bg-[linear-gradient(120deg,#eaf0ff_0%,#f5f1ff_55%,#ffffff_100%)]">
+        <div aria-hidden="true" className="absolute left-[-5rem] top-[-7rem] h-72 w-72 rounded-full bg-[#3985ff]/10 blur-3xl" />
+        <div aria-hidden="true" className="absolute bottom-[-8rem] right-[-4rem] h-80 w-80 rounded-full bg-[#6652e8]/10 blur-3xl" />
+        <div aria-hidden="true" className="absolute right-[12%] top-16 h-24 w-24 rounded-full border border-[#244fe5]/10 bg-white/40 blur-sm" />
+        <div className="mx-auto max-w-[1280px] px-4 py-12 sm:px-6 md:py-16 lg:px-8 lg:py-[72px]">
+          <div className="mx-auto max-w-5xl text-center">
+            <Badge variant="purple" className="animate-premium-rise mb-5 border-[#d9e2ff] bg-white/85 px-4 py-2 shadow-[0_8px_24px_rgba(36,79,229,.07)]">
+              <Globe2 className="h-4 w-4" />
               Serving India · UAE · USA · UK · Canada · China · Singapore
             </Badge>
-            <h1 className="font-heading text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-              <span className="brand-gradient-text">{siteConfig.heroHeadline}</span>
+            <h1 className="font-heading text-[clamp(32px,7vw,68px)] font-extrabold leading-[1.06] tracking-[-0.045em] text-[#101d40]">
+              <span className="brand-gradient-text">Education Beyond Classrooms.</span>
+              <span className="mt-1 block">Opportunities Beyond Limits.</span>
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
-              {siteConfig.tagline} Explore Grade 1–12 international learning, curriculum-aligned live tutoring,
-              verified formula sheets, structured study notes, exam preparation, and future-ready AI &amp; STEM bootcamps.
+            <p className="mx-auto mt-6 max-w-3xl text-[15px] leading-[1.75] text-[#64748b] sm:text-[17px]">
+              Learn Beyond Limits. Achieve Beyond Expectations. Explore Grade 1–12 international learning,
+              curriculum-aligned live tutoring, verified formula sheets, structured study notes, exam preparation,
+              and future-ready AI &amp; STEM bootcamps.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <Link href="/classes" className="brand-gradient-bg inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:opacity-95">
-                Explore Grades 1–12 <ArrowRight className="h-4 w-4" />
+              <Link href="/classes" className="brand-gradient-bg inline-flex min-h-12 items-center gap-2 rounded-xl px-6 py-3 text-[15px] font-semibold text-white shadow-[0_12px_28px_rgba(36,79,229,.22)] transition duration-300 hover:-translate-y-1">
+                Explore Grades 1–12 <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
-              <Link href="/contact?topic=demo" className="inline-flex items-center gap-2 rounded-xl border border-blue-200 bg-blue-50 px-6 py-3 text-sm font-semibold text-blue-700 transition hover:bg-blue-100">
-                Book a Free Demo
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdZgwfd0RrtK0tookj3PVaLbw5f3I3kS3CbJbX_EZDeMF6A7g/viewform?usp=header" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#bdd0ff] bg-white/90 px-5 py-3 text-[15px] font-semibold text-[#244fe5] shadow-[0_8px_20px_rgba(36,79,229,.07)] transition duration-300 hover:-translate-y-1 hover:bg-[#eef3ff]">
+                🎓 Book Your FREE Demo Class
               </Link>
-              <Link href="/formula-sheets" className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-blue-300 hover:text-blue-700">
-                <Calculator className="h-4 w-4 text-violet-600" />
-                Formula Sheets Centre
+              <Link href="/formula-sheets" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#dce5f5] bg-white/85 px-5 py-3 text-[15px] font-semibold text-[#334155] shadow-[0_8px_20px_rgba(16,29,64,.04)] transition duration-300 hover:-translate-y-1 hover:border-[#b9c9f5] hover:text-[#244fe5]">
+                <Calculator className="h-4 w-4 text-[#6652e8]" /> Formula Sheets Centre
               </Link>
-              <Link href="/courses" className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-blue-300 hover:text-blue-700">
+              <Link href="/courses" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#dce5f5] bg-white/85 px-5 py-3 text-[15px] font-semibold text-[#334155] transition duration-300 hover:-translate-y-1 hover:border-[#b9c9f5] hover:text-[#244fe5]">
                 Explore Courses
               </Link>
-              <Link href="/olympiads" className="inline-flex items-center gap-2 rounded-xl border border-violet-200 bg-violet-50 px-5 py-3 text-sm font-semibold text-violet-700 transition hover:bg-violet-100">
-                <Sparkles className="h-4 w-4" />
-                Olympiad Competition Registration
+              <Link href="/olympiads" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#ded8fa] bg-[#f7f5ff]/90 px-5 py-3 text-[15px] font-semibold text-[#6652e8] transition duration-300 hover:-translate-y-1 hover:bg-[#efecff]">
+                <Sparkles className="h-4 w-4" /> Olympiad Competition Registration
               </Link>
             </div>
           </div>
@@ -97,26 +100,42 @@ export default function HomePage() {
         </div>
       </RevealSection>
 
-      <RevealSection className="border-y border-slate-100 bg-slate-50/70 py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+      <RevealSection className="border-y border-[#e7edf7] bg-[linear-gradient(135deg,#f7f9ff_0%,#eef3ff_50%,#f7f5ff_100%)] py-16">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+          <div className="mb-9 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
               <Badge variant="purple">Complete K–12 Architecture</Badge>
-              <h2 className="mt-2 font-heading text-2xl font-extrabold text-slate-900 sm:text-3xl">Individual Learning Hubs for Grades 1 to 12</h2>
+              <h2 className="mt-3 font-heading text-[clamp(26px,4vw,40px)] font-extrabold text-[#101d40]">Individual Learning Hubs for Grades 1 to 12</h2>
             </div>
-            <Link href="/classes" className="text-sm font-semibold text-blue-700 hover:underline">Open full Grade Directory →</Link>
+            <Link href="/classes" className="text-sm font-semibold text-[#244fe5] transition hover:text-[#6652e8]">Open full Grade Directory →</Link>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {GRADES.map((g) => (
-              <Link key={g.slug} href={`/academics/${g.slug}`} className="rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-heading text-lg font-bold text-slate-900">{g.title}</h3>
-                  <span className="rounded-full bg-blue-50 px-2.5 py-0.5 text-[11px] font-semibold text-blue-700">{g.stage}</span>
-                </div>
-                <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-slate-600">{g.overview}</p>
-                <p className="mt-3 text-xs font-semibold text-violet-700">{g.subjects.length} Core Subject Hubs →</p>
-              </Link>
-            ))}
+          <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {GRADES.map((g) => {
+              const badgeClass = g.stage === "Primary"
+                ? "bg-[#eef4ff] text-[#244fe5]"
+                : g.stage === "Middle"
+                  ? "bg-[#f1eeff] text-[#6652e8]"
+                  : g.stage === "Secondary"
+                    ? "bg-[#eaf2ff] text-[#3157b7]"
+                    : "bg-[#f2edff] text-[#7047d8]";
+              return (
+                <Link
+                  key={g.slug}
+                  href={`/academics/${g.slug}`}
+                  className="group flex min-h-[210px] flex-col rounded-[24px] border border-[#e3eaf7] bg-[linear-gradient(120deg,#f0f5ff_0%,#ffffff_100%)] p-6 shadow-[0_8px_30px_rgba(25,55,120,.055)] transition duration-300 hover:-translate-y-[5px] hover:border-[#b9c9f5] hover:shadow-[0_18px_45px_rgba(36,79,229,.12)]"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="font-heading text-[20px] font-bold text-[#101d40]">{g.title}</h3>
+                    <span className={`shrink-0 rounded-full px-3 py-1 text-[11px] font-bold ${badgeClass}`}>{g.stage}</span>
+                  </div>
+                  <p className="mt-3 text-[14px] leading-[1.7] text-[#64748b]">{g.overview}</p>
+                  <div className="mt-auto flex items-center justify-between border-t border-[#edf1f8] pt-4 text-sm font-semibold text-[#6652e8]">
+                    <span>{g.subjects.length} Core Subject Hubs</span>
+                    <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1.5" />
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </RevealSection>

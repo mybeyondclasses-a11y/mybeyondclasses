@@ -24,8 +24,8 @@ export default async function BootcampDetailPage({ params }: { params: Promise<{
           <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm text-slate-700">
             {b.modules.map((m) => <li key={m}>{m}</li>)}
           </ol>
-          <Link href="/contact?topic=demo" className="brand-gradient-bg mt-6 inline-block rounded-xl px-5 py-2.5 text-sm font-semibold text-white">
-            Enquire / Reserve Cohort Seat
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdZgwfd0RrtK0tookj3PVaLbw5f3I3kS3CbJbX_EZDeMF6A7g/viewform?usp=header" className="brand-gradient-bg mt-6 inline-block rounded-xl px-5 py-2.5 text-sm font-semibold text-white">
+            🎓 Book Your FREE Demo Class
           </Link>
         </div>
       </main>

@@ -33,7 +33,7 @@ export default function PricingPage() {
       </div>
       <div className="mt-10 grid gap-6 lg:grid-cols-3">
         {PRICING_PLANS.map((plan) => (
-          <div key={plan.id} className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div key={plan.id} className="premium-card premium-card-purple flex flex-col justify-between p-6">
             <div>
               <Badge variant="purple">{plan.badge}</Badge>
               <h2 className="mt-3 font-heading text-xl font-bold text-slate-900">{plan.name}</h2>
@@ -46,7 +46,9 @@ export default function PricingPage() {
                 ))}
               </ul>
             </div>
-            <Link href={plan.ctaHref} className="brand-gradient-bg mt-8 block rounded-xl px-4 py-2.5 text-center text-sm font-semibold text-white">{plan.ctaLabel}</Link>
+            <Link href={plan.ctaHref} className="premium-button-primary mt-8 block w-full">
+              {plan.ctaLabel}
+            </Link>
           </div>
         ))}
       </div>

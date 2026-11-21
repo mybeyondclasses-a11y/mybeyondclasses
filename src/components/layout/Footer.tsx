@@ -17,7 +17,8 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-slate-800 bg-slate-950 text-slate-300">
+    <footer className="relative overflow-hidden border-t border-[#263866] bg-[#101b3d] text-slate-300">
+      <div aria-hidden="true" className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-[#477bff]/10 blur-3xl" />
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         {/* Top Brand + Newsletter Strip */}
         <div className="grid gap-10 border-b border-slate-800 pb-12 lg:grid-cols-12">

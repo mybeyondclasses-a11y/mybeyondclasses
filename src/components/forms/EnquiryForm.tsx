@@ -45,8 +45,8 @@ export function EnquiryForm({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-      <h3 className="font-heading text-lg font-bold text-slate-900">{heading}</h3>
+    <form onSubmit={handleSubmit} className="premium-card premium-card-blue space-y-5 p-6 sm:p-7">
+      <h3 className="font-heading text-xl font-extrabold text-[#101b3d]">{heading}</h3>
       {status && (
         <div
           className={`flex items-start gap-2 rounded-xl border p-3.5 text-sm ${
@@ -138,7 +138,7 @@ export function EnquiryForm({
       <button
         type="submit"
         disabled={loading}
-        className="brand-gradient-bg inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-95 disabled:opacity-60"
+        className="premium-button-primary disabled:cursor-not-allowed disabled:opacity-60"
       >
         {loading && <Loader2 className="h-4 w-4 animate-spin" />}
         Submit Request
